@@ -1,30 +1,15 @@
 package Entitie;
 
-public class ContaCorrente {
+public class ContaCorrente extends Conta {
 
-	private int agencia = 123;
-
-
-	public ContaCorrente(int agencia, Integer numeroConta, Double saldo) {
-		this.agencia = agencia;
-
+	public ContaCorrente(Cliente cliente) {
+		super(cliente);
 	}
 
-	public int getAgencia() {
-		return agencia;
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("=== Extrato Conta Corrente ===");
+		super.imprimirInfosComuns();
 	}
-
-
-	public void sacar() {
-
-	}
-
-	public void depositar() {
-
-	}
-
-	public void tranferir() {
-
-	}
-
+	
 }

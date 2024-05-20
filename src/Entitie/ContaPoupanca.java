@@ -1,30 +1,14 @@
 package Entitie;
 
-public class ContaPoupanca {
-	
-	private int agencia = 321;
-	
-	
+public class ContaPoupanca extends Conta {
 
-	public ContaPoupanca(int agencia) {
-		this.agencia = agencia;
+	public ContaPoupanca(Cliente cliente) {
+		super(cliente);
 	}
 
-	public int getAgencia() {
-		return agencia;
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("=== Extrato Conta Poupança ===");
+		super.imprimirInfosComuns();
 	}
-
-
-	public void sacar() {
-
-	}
-
-	public void depositar() {
-
-	}
-
-	public void tranferir() {
-
-	}
-
 }
